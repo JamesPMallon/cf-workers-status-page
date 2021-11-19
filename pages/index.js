@@ -18,7 +18,7 @@ const MonitorStore = new Store({
 const filterByTerm = (term) =>
   MonitorStore.set((state) => ({
     visible: state.monitors.filter((monitor) =>
-      monitor.name.toLowerCase().includes(term),
+      monitor.name.toLowerCase().includes(term.toLowerCase()),
     ),
   }))
 
